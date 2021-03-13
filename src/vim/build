@@ -1,0 +1,14 @@
+#!/bin/bash -u
+
+source ${BUILDER_BASE}/lib
+
+CHECK vim git://github.com/vim/vim
+
+makepkg || exit 1
+rm ${BUILDER_BASE}/pkg/vim*.zst
+mv *.zst ${BUILDER_BASE}/pkg/
+
+cd vim
+REHASH vim
+
+COMMIT vim

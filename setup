@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd $(dirname $(realpath $0))
+git config user.email znmxodq1@gmail.com
+git config user.name kuuote
+useradd -m builduser
+echo 'builduser ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers

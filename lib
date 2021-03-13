@@ -1,0 +1,40 @@
+#!/bin/bash -u
+
+# CHECK <hash-name> <repo-url>
+CHECK() {
+  git ls-remote "$2" HEAD > /tmp/hash || exit 1
+  if [[ $(cat "${BUILDER_BASE}/hash/${1}") == $(awk '{print $1}' /tmp/hash) ]]; then
+    exit 0
+  fi
+}
+
+# CHECKLOCAL <hash-name>
+CHECKLOCAL() {
+  if [[ $(cat "${BUILDER_BASE}/hash/${1}") == $(git rev-parse HEAD) ]]; then
+    exit 0
+  fi
+}
+
+# COMMIT <msg>
+COMMIT () {
+(
+  cd ${BUILDER_BASE}
+  rm -rf pkg/kuuote*
+  repo-add pkg/kuuote.db.tar.zst pkg/*
+  rm pkg/kuuote.db
+  mv pkg/kuuote.db{.tar.zst,}
+  rm pkg/kuuote.files
+  mv pkg/kuuote.files{.tar.zst,}
+  git add -A hash
+  git add -A pkg
+  git commit -m "Update $*"
+  git push
+)
+}
+
+# REHASH <hash-name>
+REHASH() {
+  mkdir -p "${BUILDER_BASE}/hash"
+  git rev-parse HEAD > "${BUILDER_BASE}/hash/${1}"
+  echo rehashed
+}

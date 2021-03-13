@@ -1,0 +1,10 @@
+#!/bin/bash -u
+
+export BUILDER_BASE=$(realpath $(dirname ${BASH_SOURCE}))
+source lib
+for p in src/*; do
+(
+  cd $p
+  source ./build
+)
+done

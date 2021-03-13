@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd $(dirname $(realpath $0))
+chown -R builduser:builduser .
+exec su builduser -c ./build2

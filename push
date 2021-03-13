@@ -1,0 +1,6 @@
+#!/bin/bash -u
+
+sudo chown -R builduser:builduser .
+git add -A
+git commit -m hoge
+git push

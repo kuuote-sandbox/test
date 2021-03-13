@@ -1,0 +1,15 @@
+name: 'build'
+on: ['workflow_dispatch']
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'
+    container: 'archlinux/base:latest'
+    steps:
+      - name: 'setup git'
+        run: 'pacman --noconfirm -Syu base-devel git sudo'
+      - name: 'Checkout this'
+        uses: 'actions/checkout@v2'
+        with:
+          path: 'test'
+      - name: 'Run script'
+        run: 'test/setup && test/build'

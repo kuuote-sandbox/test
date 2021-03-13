@@ -1,0 +1,14 @@
+#!/bin/bash -u
+
+source ${BUILDER_BASE}/lib
+
+CHECK neovim git://github.com/neovim/neovim
+
+makepkg -s || exit 1
+rm ${BUILDER_BASE}/pkg/neovim-git*.zst
+mv *.zst ${BUILDER_BASE}/pkg/
+
+cd neovim
+REHASH neovim
+
+COMMIT neovim

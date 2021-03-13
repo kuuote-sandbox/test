@@ -1,0 +1,15 @@
+#!/bin/bash -u
+
+source ${BUILDER_BASE}/lib
+
+CHECK go 'https://go.googlesource.com/go'
+sudo pacman --noconfirm -S go
+makepkg --nocheck || exit 1
+sudo pacman --noconfirm -Rcs go
+# rm ${BUILDER_BASE}/pkg/go*.zst
+mv *.zst ${BUILDER_BASE}/pkg/
+
+cd go
+REHASH go
+
+COMMIT go
