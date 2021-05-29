@@ -6,11 +6,11 @@ This script will replace JavaScript/TypeScript files in the cache to files in th
 
 # Permissions
 
-| Permission | Description     |
-| ---------- | --------------- |
-| `env`      | Access to $HOME |
-| `read`     | Read <libpath>  |
-| `write`    | Write to cache  |
+| Permission | Description                            |
+| ---------- | -------------------------------------- |
+| `env`      | Access to $HOME for resolve cache path |
+| `read`     | Read <libpath>                         |
+| `write`    | Write to cache                         |
 
 # Usage
 
