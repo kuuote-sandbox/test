@@ -6,12 +6,18 @@ This script will replace JavaScript/TypeScript files in the cache to files in th
 
 # Permissions
 
+Here's an overview of how deno-cache-injector uses permissions:
+
 | Permission | Description                            |
 | ---------- | -------------------------------------- |
 | `env`      | Access to $HOME for resolve cache path |
 | `read`     | Read `<libpath>`                       |
-| `write`    | Write to cache                         |
+| `write`    | Write cache                            |
 
 # Usage
 
-`deno run --allow-env --allow-read --allow-write injector.
+`deno-cache-injector <option>... <libpath> <liburl>`
+
+## Example
+
+`test`
