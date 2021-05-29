@@ -18,6 +18,6 @@ Here's an overview of how deno-cache-injector uses permissions:
 
 `deno-cache-injector <option>... <libpath> <liburl>`
 
-## Example
+### Example
 
 `test`
