@@ -9,7 +9,7 @@ This script will replace JavaScript/TypeScript files in the cache to files in th
 | Permission | Description                            |
 | ---------- | -------------------------------------- |
 | `env`      | Access to $HOME for resolve cache path |
-| `read`     | Read <libpath>                         |
+| `read`     | Read `<libpath>`                       |
 | `write`    | Write to cache                         |
 
 # Usage
