@@ -18,6 +18,21 @@ Here's an overview of how deno-cache-injector uses permissions:
 
 `deno-cache-injector <option>... <libpath> <liburl>`
 
+### Options
+
+| Option | Description                                         |
+| ------ | --------------------------------------------------- |
+| -d     | Delete cache (Only files that exists in `<libpath>` |
+| -s     | Use symbolic link                                   |
+| -d     | Display verbose log                                 |
+
+### Arguments
+
+| Argument    | Description                                               |
+| ----------- | --------------------------------------------------------- |
+| `<libpath>` | A local directory path which is used to replace the cache |
+| `<liburl>`  | A base URL of a library in the cache to replace           |
+
 ### Example
 
-`test`
+`deno-cache-injector ./denops-std-deno https://deno.land/x/denops_std@v0.10`
