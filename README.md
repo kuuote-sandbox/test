@@ -24,7 +24,7 @@ Here's an overview of how deno-cache-injector uses permissions:
 | ------ | --------------------------------------------------- |
 | -d     | Delete cache (Only files that exists in `<libpath>` |
 | -s     | Use symbolic link                                   |
-| -d     | Display verbose log                                 |
+| -v     | Display verbose log                                 |
 
 ### Arguments
 
@@ -36,3 +36,7 @@ Here's an overview of how deno-cache-injector uses permissions:
 ### Example
 
 `deno-cache-injector ./denops-std-deno https://deno.land/x/denops_std@v0.10`
+
+or
+
+`deno-cache-injector -s ./denops-std-deno https://deno.land/x/denops_std@v0.10`
