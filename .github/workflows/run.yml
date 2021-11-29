@@ -1,11 +1,12 @@
-name: 'tmate'
+name: 'run'
 on: ['workflow_dispatch']
 jobs:
-  mac:
-    runs-on: 'macos-11'
+  yeah:
+    runs-on: 'ubuntu-latest'
     steps:
       - uses: 'actions/checkout@v2'
         with:
           repository: 'kuuote-sandbox/priv'
           token: ${{ secrets.PAT }}
-      - uses: 'mxschmitt/action-tmate@v3'
+      - name: 'Run script'
+        run: './run'
