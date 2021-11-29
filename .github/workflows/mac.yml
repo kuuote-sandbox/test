@@ -2,7 +2,7 @@ name: 'mac'
 on: ['workflow_dispatch']
 jobs:
   fuckintosh:
-    runs-on: 'macos-11'
+    runs-on: 'macos-10'
     steps:
       - uses: 'actions/checkout@v2'
         with:
