@@ -1,7 +1,7 @@
-name: 'run'
+name: 'ubuntu'
 on: ['workflow_dispatch']
 jobs:
-  yeah:
+  oobunchu:
     runs-on: 'ubuntu-latest'
     steps:
       - uses: 'actions/checkout@v2'
