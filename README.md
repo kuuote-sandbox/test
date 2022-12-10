@@ -1,6 +1,7 @@
 This plugin is still work in progress
 
-![2022-12-10-174033_1896x1034_scrot](https://user-images.githubusercontent.com/36663503/206841573-8d58fbab-d00b-4ff7-b8b9-5f51a0aa4504.png)
+![2022-12-10-174033_1896x1034_scrot](https://user-images.githubusercontent.com/36663503/206841653-1b07ada4-c4e9-43cb-8ad9-e37e560d99e2.png)
+
 
 # Skkeleton
 
