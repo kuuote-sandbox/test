@@ -1,6 +1,6 @@
 This plugin is still work in progress
 
-![2022-12-10-174306_1896x1034_scrot](https://github.com/kuuote/files/blob/main/ddu-source-git_diff.png)
+![2022-12-10-174306_1896x1034_scrot](https://github.com/kuuote/files/blob/main/ddu-source-git_diff.png?raw=True)
 
 
 # Skkeleton
