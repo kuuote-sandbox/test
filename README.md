@@ -1,5 +1,7 @@
 This plugin is still work in progress
 
+![2022-12-10-174033_1896x1034_scrot](https://user-images.githubusercontent.com/36663503/206841573-8d58fbab-d00b-4ff7-b8b9-5f51a0aa4504.png)
+
 # Skkeleton
 
 skkeleton is a Vim/Neovim plugin that provides japanese input environment called
