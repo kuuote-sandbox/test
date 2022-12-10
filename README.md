@@ -1,29 +1,7 @@
-This plugin is still work in progress
+# ddu-source-git_diff
+
+`git diff` source for [ddu.vim](https://github.com/Shougo/ddu.vim)
 
 ![2022-12-10-174306_1896x1034_scrot](https://github.com/kuuote/files/blob/main/ddu-source-git_diff.png?raw=True)
 
-
-# Skkeleton
-
-skkeleton is a Vim/Neovim plugin that provides japanese input environment called
-SKK.
-
-It's heavily inspired from [ddskk](https://github.com/skk-dev/ddskk) and
-[eskk.vim](https://github.com/tyru/eskk.vim).
-
-![movie](https://user-images.githubusercontent.com/36663503/131238795-89866efb-6064-4832-b0cf-132fbab1da94.gif)
-
-# Documentation
-
-See
-[doc](https://github.com/kuuote/denops-skkeleton.vim/tree/main/doc/skkeleton.jax)
-
-# Requirements
-
-This plugin is using [denops.vim](https://github.com/vim-denops/denops.vim).
-
-Required version is the same as `denops.vim`.
-
-# License
-
-zlib license
+Please read [help](doc/ddu-source-git_diff.txt) for details.
