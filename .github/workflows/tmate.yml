@@ -2,7 +2,7 @@ name: 'tmate'
 on: ['workflow_dispatch']
 jobs:
   mac:
-    runs-on: 'windows-latest'
+    runs-on: 'ubuntu-latest'
     steps:
       - uses: 'actions/checkout@v2'
         with:
