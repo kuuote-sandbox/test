@@ -4,14 +4,14 @@ jobs:
   oobunchu:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: 'actions/cache@v4'
-        with:
-          path: ~/cache
-          key: "generic-cache-${{ hashFiles('setup') }}"
-          restore-keys: generic-cache-
       - uses: 'actions/checkout@v2'
         with:
           repository: 'kuuote-sandbox/priv'
           token: ${{ secrets.PAT }}
+      - uses: 'actions/cache@v4'
+        with:
+          path: ~/cache
+          key: generic-cache-${{ hashFiles('setup') }}
+          restore-keys: generic-cache-
       - name: 'Run script'
         run: './run'
