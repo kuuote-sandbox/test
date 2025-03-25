@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -u
+
+false
+while true; do
+  ssh -p 1234 runner@localhost true && clear && exit
+  sleep 1
+done

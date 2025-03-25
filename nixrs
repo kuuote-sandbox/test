@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -u
+
+rsync -ac --delete-before -e 'ssh -p 1234' /data/nix/ runner@localhost:/home/runner/nix/
+cat > /tmp/nix.env << EOF
+HM_PROFILE=github
+NIXOS_NAME=latitude
+EOF
+rsync -ac --delete-before -e 'ssh -p 1234' /tmp/nix.env runner@localhost:/home/runner/nix.env
+ssh -p 1234 runner@localhost
